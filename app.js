@@ -42,3 +42,8 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+var mongoose = require('mongoose');
+mongoose.connect(process.env.DB_URI, { useNewUrlParser: true })
+.then(() => console.log('connection successful'))
+.catch((err) => console.error(err));
