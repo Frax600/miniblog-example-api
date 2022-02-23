@@ -15,7 +15,7 @@ var UserSchema = new Schema({
     role: {
     type: String,
     enum: ['admin', 'subscriber'],
-    default: 'subscriber '
+    default: 'subscriber'
     },
     posts: [{
         type: Schema.ObjectId,
